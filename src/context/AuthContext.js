@@ -9,14 +9,14 @@ export const AuthProvider = ({ children }) => {
   const login = async (phoneNumber, otp) => {
     const res = await api.login(phoneNumber);
     if (res.ok) {
-      const verified = await api.verifyOtp(otp);
+      const verified = await api.verifyOtp(otp, phoneNumber);
       if (verified.ok) {
         const data = await verified.json();
-        const dummyData = await api.getUserById(1);
-        console.log(dummyData);
-        setUser(dummyData);
+        setUser(data);
+        return true;
       }
     }
+    return false;
   };
 
   return (
