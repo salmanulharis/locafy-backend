@@ -28,4 +28,16 @@ export const api = {
       body: JSON.stringify(shop)
     }),
     deleteShopById: (shopId) => fetch(`${BASE_URL}/shops/${shopId}`, { method: 'DELETE' }),
+    addProduct: (product) => fetch(`${BASE_URL}/products`, { 
+      method: 'POST', 
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(product)
+    }),
+    getProduct: (productId) => fetch(`${BASE_URL}/products/${productId}`),
+    deleteProduct: (productId) => fetch(`${BASE_URL}/products/${productId}`, { method: 'DELETE' }),
+    updateProduct: (productId, product) => fetch(`${BASE_URL}/products/${productId}`, { 
+      method: 'PUT', 
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(product)
+    }),
 };

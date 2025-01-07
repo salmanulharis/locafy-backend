@@ -43,6 +43,10 @@ const ShopDetails = () => {
     }
   };
 
+  const handleView = (shopId) => {
+    navigate(`/shops/view/${shopId}`);
+  };
+
   return (
     <div>
       {shops.length > 0 ? (
@@ -52,6 +56,7 @@ const ShopDetails = () => {
             <p>Address: {shop.address}</p>
             <p>Place: {shop.place}</p>
             <p>Phone: {shop.phone}</p>
+            <button onClick={() => handleView(shop.id)}>View</button>
             <button onClick={() => handleEdit(shop.id)}>Edit</button>
             <button onClick={() => handleDelete(shop.id)}>Delete</button>
           </div>

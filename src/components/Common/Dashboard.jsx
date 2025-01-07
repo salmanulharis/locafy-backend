@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { api } from '../../services/api';
-import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -18,22 +17,18 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    fetchUser() 
+    fetchUser();
   }, []);
 
   return (
     <div>
       <h1>Dashboard</h1>
       <h2>Welcome, {user.name}</h2>
-      <button onClick={() => navigate('/products')}>Go to Products</button>
       {user.type === 'shop_owner' && (
-        <>
-        <button onClick={() => navigate('/products/add')}>Add Product</button>
-        <button onClick={() => navigate('/shops/add')}>Add Shop</button>
-        </>
+        <button onClick={() => navigate('/shops')}>Go to Shops</button>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

@@ -12,6 +12,8 @@ import ShopDetails from './components/Customer/ShopDetails';
 import Dashboard from './components/Common/Dashboard';
 import AddProduct from './components/Common/AddProduct';
 import AddShop from './components/Common/AddShop';
+import ViewShop from './components/Common/ViewShop';
+import ViewProduct from './components/Common/ViewProduct';
 
 const App = () => {
   return (
@@ -23,11 +25,13 @@ const App = () => {
             <Route path="/" element={<Dashboard />} />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/manage-products" element={<ManageProducts />} />
-            <Route path="/products" element={<ProductList />} />
-            <Route path="/products/add" element={<AddProduct />} />
+            <Route path="/products/:id" element={<ProductList />} />
+            <Route path="/products/add/:id" element={<AddProduct />} />
+            <Route path="/product/:id" element={<ViewProduct />} />
             <Route path="/admin/manage-shops" element={<ManageShops />} />
             <Route path="/shops/add" element={<AddShop />} />
             <Route path="/shops/edit/:id" element={<AddShop />} />
+            <Route path="/shops/view/:id" element={<ViewShop />} />
             <Route path="/shops" element={<ShopDetails />} />
           </Routes>
         </Router>
