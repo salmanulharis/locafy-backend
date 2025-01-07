@@ -131,7 +131,7 @@ const AddShop = () => {
                     onChange={handleChange}
                     required
                 />
-                <button type="submit">{isEdit ? 'Update Shop' : 'Add Shop'}</button>
+                <button className='primary-btn' type="submit">{isEdit ? 'Update Shop' : 'Add Shop'}</button>
             </form>
         </div>
     );

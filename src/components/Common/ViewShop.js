@@ -69,9 +69,9 @@ const ViewShop = () => {
                 <p>{shop.pincode}</p>
                 <div>{shop.address}</div>
                 <div className="shop-actions">
-                    <button onClick={() => navigate(`/products/add/${id}`)}>Add Product</button>
-                    <button onClick={() => navigate(`/shops/edit/${id}`)}>Edit Shop</button>
-                    <button onClick={handleDelete}>Delete Shop</button>
+                    <button className='add-button' onClick={() => navigate(`/products/add/${id}`)}>Add Product</button>
+                    <button className="edit-button" onClick={() => navigate(`/shops/edit/${id}`)}>Edit Shop</button>
+                    <button className="delete-button" onClick={handleDelete}>Delete Shop</button>
                 </div>
             </div>
             <div className="shop-products">
@@ -81,7 +81,7 @@ const ViewShop = () => {
                         {products.map(product => (
                             <li key={product.id} className="product">
                                 {product.name}
-                                <button className='view-product' onClick={() => navigate(`/product/${product.id}`)}>View Product</button>
+                                <button className='view-product primary-btn' onClick={() => navigate(`/product/${product.id}`)}>View Product</button>
                             </li>
                         ))}
                     </ul>

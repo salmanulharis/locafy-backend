@@ -15,6 +15,7 @@ import AddShop from './components/Common/AddShop';
 import ViewShop from './components/Common/ViewShop';
 import ViewProduct from './components/Common/ViewProduct';
 import NavBar from './components/Common/NavBar';  // Import NavBar
+import AddUser from './components/Admin/AddUser';
 
 const App = () => {
   return (
@@ -35,6 +36,8 @@ const App = () => {
             <Route path="/shops/edit/:id" element={<AddShop />} />
             <Route path="/shops/view/:id" element={<ViewShop />} />
             <Route path="/shops" element={<ShopDetails />} />
+            <Route path="/user/add" element={<AddUser />} />
+
           </Routes>
         </Router>
       </Provider>

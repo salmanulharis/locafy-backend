@@ -101,8 +101,8 @@ const ViewProduct = () => {
           <p>{product.price}</p>
           <img src={product.image} alt={product.name} />
           <p>Shop: {shopName}</p>
-          <button onClick={handleEdit}>Edit</button>
-          <button onClick={handleDelete}>Delete</button>
+          <button className='primary-btn' onClick={handleEdit}>Edit</button>
+          <button className='delete-button' onClick={handleDelete}>Delete</button>
         </div>
       )}
     </div>

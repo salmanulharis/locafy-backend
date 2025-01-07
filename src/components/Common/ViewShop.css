@@ -78,8 +78,6 @@
   }
   
   .view-product {
-    padding: 5px 10px;
-    border: 2px solid #228b22; /* Green border */
     border-radius: 4px;
     background-color: #228b22; /* Green background */
     color: white; /* White text */

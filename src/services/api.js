@@ -40,4 +40,9 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(product)
     }),
+    addUser: (user) => fetch(`${BASE_URL}/users`, { 
+      method: 'POST', 
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(user)
+    }),
 };

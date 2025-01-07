@@ -66,7 +66,7 @@ const AddProduct = () => {
           <label>Image URL:</label>
           <input type="text" name="image" value={product.image} onChange={handleChange} required />
         </div>
-        <button type="submit">Add Product</button>
+        <button className="primary-btn" type="submit">Add Product</button>
       </form>
     </div>
   );

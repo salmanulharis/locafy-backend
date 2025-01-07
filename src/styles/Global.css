@@ -13,7 +13,6 @@ body {
   }
   
   input, button {
-    margin: 10px 0;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -21,14 +20,14 @@ body {
   }
   
   button {
-    background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
+    padding: 10px 15px;
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #a0a0a0;
   }
   
   /* Form Styles */
@@ -58,7 +57,6 @@ body {
   }
   
   li {
-    padding: 10px;
     margin: 5px 0;
     background: white;
     border-radius: 4px;
@@ -91,14 +89,17 @@ body {
     background-color: #0056b3;
   }
 
-  .dashboard {
-    width: 100%;
-    height: 100%;
+  .shop-owner-actions {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
+    gap: 10px;
+    margin-bottom: 20px;
   }
 
-
+  .edit-button, .view-button, .add-button, .primary-btn {
+    background-color: rgb(143, 177, 143) !important;
+  }
+  
+  .delete-button {
+    background-color: #dc3545 !important;
+  }
   

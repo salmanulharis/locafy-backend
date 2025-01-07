@@ -58,10 +58,10 @@ const ShopDetails = () => {
             <p>Place: {shop.place}</p>
             <p>Phone: {shop.phone}</p>
             <div>Pincode: {shop.pincode}</div>
-            <div className="shop-actions">
-              <button onClick={() => handleView(shop.id)}>View</button>
-              <button onClick={() => handleEdit(shop.id)}>Edit</button>
-              <button onClick={() => handleDelete(shop.id)}>Delete</button>
+            <div className="shop-actions-container">
+              <button className="view-button" onClick={() => handleView(shop.id)}>View</button>
+              <button className="edit-button" onClick={() => handleEdit(shop.id)}>Edit</button>
+              <button className="delete-button" onClick={() => handleDelete(shop.id)}>Delete</button>
             </div>
           </div>
         ))
