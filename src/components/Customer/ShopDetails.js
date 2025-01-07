@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
+import './ShopDetails.css';
 
 const ShopDetails = () => {
   const loginUser = JSON.parse(localStorage.getItem('locafy-user'));
@@ -48,17 +49,20 @@ const ShopDetails = () => {
   };
 
   return (
-    <div>
+    <div className="shop-details-container">
       {shops.length > 0 ? (
         shops.map((shop) => (
-          <div key={shop.id}>
+          <div key={shop.id} className="shop-details">
             <h2>{shop.name}</h2>
             <p>Address: {shop.address}</p>
             <p>Place: {shop.place}</p>
             <p>Phone: {shop.phone}</p>
-            <button onClick={() => handleView(shop.id)}>View</button>
-            <button onClick={() => handleEdit(shop.id)}>Edit</button>
-            <button onClick={() => handleDelete(shop.id)}>Delete</button>
+            <div>Pincode: {shop.pincode}</div>
+            <div className="shop-actions">
+              <button onClick={() => handleView(shop.id)}>View</button>
+              <button onClick={() => handleEdit(shop.id)}>Edit</button>
+              <button onClick={() => handleDelete(shop.id)}>Delete</button>
+            </div>
           </div>
         ))
       ) : (

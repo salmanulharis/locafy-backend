@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
+import './ViewShop.css';
 
 const ViewShop = () => {
     const { id } = useParams();
@@ -60,24 +61,27 @@ const ViewShop = () => {
     }
 
     return (
-        <div>
+        <div className="shop-details-container">
             <div className="shop-details">
                 <h1>{shop.name}</h1>
                 <p>{shop.place}</p>
                 <p>{shop.phone}</p>
                 <p>{shop.pincode}</p>
-                <button onClick={() => navigate(`/products/add/${id}`)}>Add Product</button>
-                <button onClick={() => navigate(`/shops/edit/${id}`)}>Edit Shop</button>
-                <button onClick={handleDelete}>Delete Shop</button>
+                <div>{shop.address}</div>
+                <div className="shop-actions">
+                    <button onClick={() => navigate(`/products/add/${id}`)}>Add Product</button>
+                    <button onClick={() => navigate(`/shops/edit/${id}`)}>Edit Shop</button>
+                    <button onClick={handleDelete}>Delete Shop</button>
+                </div>
             </div>
             <div className="shop-products">
                 <h2>Products</h2>
                 {products.length > 0 ? (
-                    <ul>
+                    <ul className="products-list">
                         {products.map(product => (
-                            <li key={product.id}>
+                            <li key={product.id} className="product">
                                 {product.name}
-                                <button onClick={() => navigate(`/product/${product.id}`)}>View Product</button>
+                                <button className='view-product' onClick={() => navigate(`/product/${product.id}`)}>View Product</button>
                             </li>
                         ))}
                     </ul>

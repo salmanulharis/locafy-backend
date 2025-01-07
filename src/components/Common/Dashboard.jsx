@@ -21,7 +21,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div>
+    <div className="dashboard">
       <h1>Dashboard</h1>
       <h2>Welcome, {user.name}</h2>
       {user.type === 'shop_owner' && (

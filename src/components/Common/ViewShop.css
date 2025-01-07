@@ -1,0 +1,93 @@
+.shop-details {
+    background-color: #f4f1ea;
+    border: 1px solid #e0a899;
+    border-radius: 8px;
+    padding: 20px;
+    width: 24%;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    float: left;
+}
+  
+  .shop-details h1 {
+    margin-top: 0;
+    font-size: 2em;
+    color: black; /* Black text */
+  }
+  
+  .shop-details p,
+  .shop-details div {
+    margin: 10px 0;
+    color: black; /* Black text */
+  }
+  
+  .shop-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .shop-actions button {
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    background-color: #228b22; /* Green background */
+    color: white; /* White text */
+  }
+  
+  .shop-actions button:hover {
+    background-color: #1e7e1e; /* Darker green on hover */
+  }
+  
+  .shop-actions button:nth-child(3) {
+    background-color: #dc3545; /* Crimson background for delete button */
+    border-color: #dc3545;
+  }
+  
+  .shop-actions button:nth-child(3):hover {
+    background-color: #c82333; /* Darker crimson on hover */
+  }
+  
+  .shop-products {
+    width: 65%;
+    float: right;
+}
+  
+  .shop-products h2 {
+    color: black; /* Black text */
+  }
+  
+  .products-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0a899; /* Terracotta border */
+    padding: 10px; /* Added padding */
+  }
+  
+  .product:last-child {
+    border-bottom: none;
+  }
+  
+  .view-product {
+    padding: 5px 10px;
+    border: 2px solid #228b22; /* Green border */
+    border-radius: 4px;
+    background-color: #228b22; /* Green background */
+    color: white; /* White text */
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .view-product:hover {
+    background-color: #1e7e1e; /* Darker green on hover */
+    color: white;
+  }

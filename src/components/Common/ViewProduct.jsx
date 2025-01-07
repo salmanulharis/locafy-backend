@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
+import './ViewProduct.css'; 
 
 const ViewProduct = () => {
   const { id } = useParams();
@@ -61,7 +62,7 @@ const ViewProduct = () => {
   };
 
   return (
-    <div>
+    <div className="product-details-container">
       {isEditing ? (
         <form onSubmit={handleSubmit}>
           <input
@@ -94,7 +95,7 @@ const ViewProduct = () => {
           <button type="submit">Update</button>
         </form>
       ) : (
-        <div>
+        <div className="product-details">
           <h1>{product.name}</h1>
           <p>{product.description}</p>
           <p>{product.price}</p>

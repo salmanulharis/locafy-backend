@@ -14,12 +14,14 @@ import AddProduct from './components/Common/AddProduct';
 import AddShop from './components/Common/AddShop';
 import ViewShop from './components/Common/ViewShop';
 import ViewProduct from './components/Common/ViewProduct';
+import NavBar from './components/Common/NavBar';  // Import NavBar
 
 const App = () => {
   return (
     <AuthProvider>
       <Provider store={store}>
         <Router>
+          <NavBar />  {/* Include NavBar here */}
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Dashboard />} />
