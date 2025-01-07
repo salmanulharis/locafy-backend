@@ -26,22 +26,5 @@ Locafy is a web application for managing shops and products. This README provide
 2. Add the following environment variables to the `.env` file:
     ```env
     REACT_APP_API_URL=http://localhost:5000/api
-    REACT_APP_OTHER_VARIABLE=your_value
+    PORT=3000
     ```
-
-## Application Pages
-
-### Home Page
-The main landing page of the application.
-
-### About Page
-Provides information about the application and its purpose.
-
-### Contact Page
-Allows users to get in touch with the support team.
-
-### Dashboard
-Displays user-specific data and analytics.
-
-### Settings
-Allows users to configure their preferences and account settings.
